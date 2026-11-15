@@ -41,7 +41,19 @@
       </button>
       <nav class="main-nav" id="mainNav" aria-label="主要導覽">
         <a class="nav-link is-current" href="#home">首頁</a>
-        <a class="nav-link" href="#courses">課程</a>
+        <div class="nav-dropdown" id="coursesDropdown">
+          <button class="nav-link nav-dropdown-toggle" id="coursesMenuToggle" type="button" aria-expanded="false" aria-controls="coursesMenu">
+            課程 <span class="dropdown-caret" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown-menu" id="coursesMenu" aria-label="課程選單">
+            <a href="courses/chinese.html"><span class="dropdown-dot dot-pink" aria-hidden="true"></span>中文</a>
+            <a href="courses/english.html"><span class="dropdown-dot dot-blue" aria-hidden="true"></span>英文</a>
+            <a href="courses/mathematics.html"><span class="dropdown-dot dot-green" aria-hidden="true"></span>數學</a>
+            <a href="courses/international-chess.html"><span class="dropdown-dot dot-purple" aria-hidden="true"></span>國際象棋</a>
+            <a href="courses/chinese-chess.html"><span class="dropdown-dot dot-orange" aria-hidden="true"></span>中國象棋</a>
+            <a class="dropdown-all" href="#courses">查看全部課程 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
         <a class="nav-link" href="#approach">教學理念</a>
         <a class="nav-link" href="#about">關於我們</a>
         <a class="nav-link" href="#contact">聯絡我們</a>
@@ -53,7 +65,7 @@
   <main id="main">
     <section class="hero" id="home" aria-label="首頁重點介紹">
       <img class="hero-photo is-active" data-hero-background="0" src="https://images.unsplash.com/photo-1758685733926-00cba008215b?auto=format&amp;fit=crop&amp;crop=entropy&amp;fm=jpg&amp;q=85&amp;w=2400" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
-      <img class="hero-photo" data-hero-background="1" src="https://images.unsplash.com/photo-1557989048-03456d01a26e?auto=format&amp;fit=crop&amp;crop=entropy&amp;fm=jpg&amp;q=85&amp;w=2400" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="hero-photo" data-hero-background="1" src="https://images.pexels.com/photos/7156128/pexels-photo-7156128.jpeg?cs=srgb&amp;dl=pexels-gustavo-fring-7156128.jpg&amp;fm=jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <img class="hero-photo" data-hero-background="2" src="https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&amp;fit=crop&amp;crop=entropy&amp;fm=jpg&amp;q=85&amp;w=2400" alt="" aria-hidden="true" loading="lazy" decoding="async">
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">

@@ -14,6 +14,59 @@
     }));
   }
 
+  const coursesDropdown = document.getElementById('coursesDropdown');
+  const coursesMenuToggle = document.getElementById('coursesMenuToggle');
+  if (coursesDropdown && coursesMenuToggle) {
+    const desktopDropdown = window.matchMedia('(min-width: 901px)');
+    const openCoursesMenu = () => {
+      coursesDropdown.classList.add('open');
+      coursesMenuToggle.setAttribute('aria-expanded', 'true');
+    };
+    const closeCoursesMenu = (restoreFocus = false) => {
+      coursesDropdown.classList.remove('open');
+      coursesMenuToggle.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) coursesMenuToggle.focus();
+    };
+
+    // Desktop: reveal the menu while the pointer is over the Courses item,
+    // then close it as soon as the pointer leaves the whole dropdown area.
+    coursesDropdown.addEventListener('pointerenter', event => {
+      if (desktopDropdown.matches && event.pointerType !== 'touch') openCoursesMenu();
+    });
+    coursesDropdown.addEventListener('pointerleave', event => {
+      if (desktopDropdown.matches && event.pointerType !== 'touch') closeCoursesMenu();
+    });
+
+    // Keyboard users can open the desktop menu by tabbing to the control.
+    coursesDropdown.addEventListener('focusin', () => {
+      if (desktopDropdown.matches) openCoursesMenu();
+    });
+    coursesDropdown.addEventListener('focusout', event => {
+      if (desktopDropdown.matches && !coursesDropdown.contains(event.relatedTarget)) closeCoursesMenu();
+    });
+
+    // Mobile/tablet: tapping the Courses row expands/collapses its submenu.
+    coursesMenuToggle.addEventListener('click', () => {
+      if (desktopDropdown.matches) {
+        openCoursesMenu();
+        return;
+      }
+      const open = coursesDropdown.classList.toggle('open');
+      coursesMenuToggle.setAttribute('aria-expanded', String(open));
+    });
+    coursesDropdown.querySelectorAll('.dropdown-menu a').forEach(link => {
+      link.addEventListener('click', () => closeCoursesMenu());
+    });
+    document.addEventListener('click', event => {
+      if (!coursesDropdown.contains(event.target)) closeCoursesMenu();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && coursesDropdown.classList.contains('open')) {
+        closeCoursesMenu(true);
+      }
+    });
+  }
+
   const slides = Array.from(document.querySelectorAll('.hero-slide'));
   const dots = Array.from(document.querySelectorAll('.hero-dot'));
   const heroBackgrounds = Array.from(document.querySelectorAll('[data-hero-background]'));

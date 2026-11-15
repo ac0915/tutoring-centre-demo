@@ -17,10 +17,10 @@ Edit `site-config.js` and fill in the centre's actual `email`, `phone`, `whatsap
 The homepage hero now has three distinct background photos. The photo cross-fades together with the matching text slide; arrows, dots, and the six-second automatic rotation all control both the text and image.
 
 1. **General tutoring / guided learning:** Vitaly Gariev — https://unsplash.com/photos/teacher-helping-young-student-with-math-problems-at-desk-wr2OzAO5fpc
-2. **Reading / language learning:** Yustinus Tjiuwanda — https://unsplash.com/photos/students-reading-textbooks-in-classroom-BCBGahg0MH0
+2. **Language learning / classroom study:** Gustavo Fring — https://www.pexels.com/photo/a-man-teaching-his-students-7156128/ — https://www.pexels.com/license/ (exact selected Pexels photo, ID 7156128: teacher guiding students at a table in a bright classroom with classroom artwork and US/UK flags).
 3. **Creative classroom learning:** Ahmadreza Rezaie — https://unsplash.com/photos/children-learning-and-creating-art-in-a-classroom-FxzoAr9QBKw
 
-Each photo page states that the image is free to use under the Unsplash License. The photos are loaded from Unsplash's image CDN, so an internet connection is needed to display them. All other site files are included in this ZIP.
+Photos 1 and 3 are from Unsplash and are free to use under the Unsplash License. Photo 2 is the exact selected image by Gustavo Fring on Pexels (photo ID 7156128). Its photo page marks it as “Free to use,” and the Pexels License permits use on websites, including commercial websites; attribution is not required (credit is included here for reference). All three photos load from their respective image CDNs, so an internet connection is needed to display them. The course dropdown opens on hover and closes when the pointer leaves on desktop; it remains tap-to-expand on mobile.
 
 ## Course information
 
